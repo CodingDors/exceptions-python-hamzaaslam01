@@ -26,7 +26,7 @@ def subtract(num1, num2):
         result = float(num1) - float(num2)
         return result
     except ValueError:
-        pass
+        raise ValueError("Invalid input. Please provide valid numbers.")
 
 def multiply(num1, num2):
     # Similar to the add function.
@@ -35,7 +35,7 @@ def multiply(num1, num2):
         result = float(num1) * float(num2)
         return result
     except ValueError:
-        pass
+        raise ValueError("Invalid input. Please provide valid numbers.")
 
 def divide(num1, num2):
     """
@@ -58,7 +58,8 @@ def divide(num1, num2):
          result = float(num1) / float(num2)
          return result
     except (ValueError, ZeroDivisionError):
-         pass
+         raise ValueError("Invalid input. Please provide valid numbers.")
+         raise ZeroDivisionError("Cannot be divided by zero")
 
 def driver():
     while True:
