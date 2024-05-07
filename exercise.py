@@ -22,12 +22,20 @@ def add(num1, num2):
 def subtract(num1, num2):
     # Similar to the add function.
     # TODO: Implement this function.
-    pass
+    try:
+        result = float(num1) - float(num2)
+        return result
+    except ValueError:
+        pass
 
 def multiply(num1, num2):
     # Similar to the add function.
     # TODO: Implement this function.
-    pass
+    try:
+        result = float(num1) * float(num2)
+        return result
+    except ValueError:
+        pass
 
 def divide(num1, num2):
     """
@@ -46,7 +54,11 @@ def divide(num1, num2):
 
     """
     # TODO: Implement this function.
-    pass
+    try:
+         result = float(num1) / float(num2)
+         return result
+    except (ValueError, ZeroDivisionError):
+         pass
 
 def driver():
     while True:
